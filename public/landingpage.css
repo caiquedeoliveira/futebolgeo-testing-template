@@ -1,0 +1,217 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color: #18171af6;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+header{
+    padding: 30px;
+    background-color: #1f1e1e;
+    border-bottom: 0.5px solid #FFFFFF;
+}
+
+header div {
+    text-align: center;
+}
+
+#links a {
+    margin: 0px 30px;
+    color: white;
+    text-decoration: none;
+}
+
+#links a:hover{
+    color:blueviolet;
+    transition: 300ms;
+}
+
+#wrapper{
+    text-align: center;
+    padding: 24px;
+}
+
+#wrapper img{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    border: 4px solid black
+}
+
+#wrapper h1 {
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 10px;
+}
+
+#wrapper h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+#wrapper ul{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 16px;
+    max-width: 480px;
+    
+    background-color: rgba(236, 114, 14, 0.116);
+}
+
+#wrapper ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 0px 12px;
+    
+    border-bottom: 1px solid orange;
+}
+
+#wrapper ul li:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.links-footer{ 
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+
+.page-title h1{
+    text-align: center;
+    padding: 24px;
+}
+
+/* === CARDS === */
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    
+}
+
+.card{
+    background-color: coral;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card-image img{
+    width: 100%;
+}
+
+.card-content,
+.card-info {
+    padding: 20px;
+}
+
+.card-content p {
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+.card-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+
+.card-time{
+    background-color: coral;
+    filter: brightness(80%);
+    text-align: center;
+    padding: 8px;
+    border-radius: 16px;
+}
+
+
+/* === MODAL === */
+
+.modal-overlay{
+    background-color: rgba(105, 105, 105, 0.767);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    background-color: coral;
+    width: 50%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal-icons{
+    color: orangered;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+
+.close-modal,
+.max-modal {
+    cursor: pointer;
+    margin: 0 4px;
+}
+
+/* == MODAL ACTIVE == */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.maximize {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.modal.maximize iframe {
+    width: 35%;
+    height: 90%;
+    left: 32vw;
+}
+
+iframe{
+    width: 60%;
+    height: 88%;
+    position: absolute;
+    top: 5vh;
+    right: 10vw;
+    border-radius: 8px;
+}
+
+/* === page not found === */
+
+.not-found {
+    background-color: coral;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 25vh auto;
+}

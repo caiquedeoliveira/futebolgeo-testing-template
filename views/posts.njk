@@ -1,0 +1,83 @@
+{% extends "template.njk"%}
+
+{% block head%}
+    <title>Publicações | Futebol Geográfico</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% endblock %}
+
+{% block content%}
+    <div class="page-title">
+        <h1>Conteúdos</h1>
+    </div>
+
+    <div class="cards">
+        <div class="card" id="CLaKgxUJd8B">
+            <div class="card-image">
+                <img src="/GRAFITE.png" alt="Publicação sobre Grafite">
+            </div>
+            <div class="card-content">
+                <p>Nos Muros da Cidade</p>
+            </div>
+            <div class="card-info">
+                <p>Caíque Rodrigues</p>
+                <p class="card-time">
+                    3 min.
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="card" id="CKzkltZp0mn">
+            <div class="card-image">
+                <img src="/NASALTURAS.png" alt="Publicação Verticalização">
+            </div>
+            <div class="card-content">
+                <p>Nas Alturas</p>
+            </div>
+            <div class="card-info">
+                <p>Caíque Rodrigues</p>
+                <p class="card-time">
+                    3 min.
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="card" id="CL4JyUNph4o">
+            <div class="card-image">
+                <img src="/FLAMENGO.png" alt="Publicação Flamengo">
+            </div>
+            <div class="card-content">
+                <p>Por todos os cantos</p>
+            </div>
+            <div class="card-info">
+                <p>Caíque Rodrigues</p>
+                <p class="card-time">
+                    3 min.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-icons">
+                <a class="close-modal">
+                    <i class="material-icons">close</i>
+                </a>
+                <a class="max-modal">
+                    <i class="material-icons">launch</i>
+                </a>
+            </div>
+
+
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="/contentscript.js"></script>
+{% endblock %}
