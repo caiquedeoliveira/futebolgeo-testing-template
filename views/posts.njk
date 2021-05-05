@@ -12,53 +12,23 @@
     </div>
 
     <div class="cards">
-        <div class="card" id="CLaKgxUJd8B">
-            <div class="card-image">
-                <img src="/GRAFITE.png" alt="Publicação sobre Grafite">
-            </div>
-            <div class="card-content">
-                <p>Nos Muros da Cidade</p>
-            </div>
-            <div class="card-info">
-                <p>Caíque Rodrigues</p>
-                <p class="card-time">
-                    3 min.
-                </p>
-            </div>
-            
-        </div>
 
-        <div class="card" id="CKzkltZp0mn">
+        {% for item in items%}
+        <div class="card" id="{{item.id}}">
             <div class="card-image">
-                <img src="/NASALTURAS.png" alt="Publicação Verticalização">
+                <img src="/{{item.file_name}}.png" alt="Imagem da Publicação {{item.title}}">
             </div>
             <div class="card-content">
-                <p>Nas Alturas</p>
+                <p>{{item.title}}</p>
             </div>
             <div class="card-info">
-                <p>Caíque Rodrigues</p>
+                <p>{{item.author}}</p>
                 <p class="card-time">
-                    3 min.
+                    {{item.duration}}
                 </p>
             </div>
-            
         </div>
-
-        <div class="card" id="CL4JyUNph4o">
-            <div class="card-image">
-                <img src="/FLAMENGO.png" alt="Publicação Flamengo">
-            </div>
-            <div class="card-content">
-                <p>Por todos os cantos</p>
-            </div>
-            <div class="card-info">
-                <p>Caíque Rodrigues</p>
-                <p class="card-time">
-                    3 min.
-                </p>
-            </div>
-            
-        </div>
+        {% endfor %}
     </div>
 
     <div class="modal-overlay">
