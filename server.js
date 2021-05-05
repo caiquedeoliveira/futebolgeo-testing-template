@@ -10,7 +10,8 @@ server.use(express.static('public'))
 
 nunjucks.configure("views", {
     express: server,
-    autoescape: false
+    autoescape: false,
+    noCache: true
 })
 
 server.get("/", (req, res)=>{
@@ -37,6 +38,22 @@ server.get("/", (req, res)=>{
 server.get("/posts", (req, res)=>{
     return res.render("posts", {items: posts})
 })
+
+server.get("/posts/:id", (req, res) => {
+    const id = req.params.id;
+
+    const post = posts.find( currentEl => {
+        return currentEl.id == id
+    })
+
+    if(!post){
+        return res.render('not-found')
+    }
+
+    return res.render("post", {item: post})
+})
+
+
 
 server.use(function(req, res) {
     res.status(404).render("not-found");

@@ -1,18 +1,18 @@
 {% extends "template.njk"%}
 
 {% block head%}
-    <title>Publicações | Futebol Geográfico</title>
+    <title>{{item.title}}</title>>
 {% endblock %}
 
 {% block content%}
     <div class="page-title">
-        <h1>Conteúdos</h1>
+        <h1>{{item.title}}</h1>
     </div>
 
-    <div class="cards">
+    <div class="posts">
 
-        {% for item in items%}
-        <div class="card" id="{{item.id}}">
+        
+        <div class="post" id="{{item.id}}">
             <div class="card-image">
                 <img src="/{{item.file_name}}.png" alt="Imagem da Publicação {{item.title}}">
             </div>
@@ -26,8 +26,9 @@
                 </p>
             </div>
         </div>
-        {% endfor %}
+        
     </div>
 
     <script src="/post-script.js"></script>
+
 {% endblock %}

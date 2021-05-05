@@ -143,59 +143,6 @@ header div {
 }
 
 
-/* === MODAL === */
-
-.modal-overlay{
-    background-color: rgba(105, 105, 105, 0.767);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.modal{
-    background-color: coral;
-    width: 50%;
-    height: 90%;
-    margin: 5vh auto;
-    position: relative;
-}
-
-.modal-icons{
-    color: orangered;
-    position: absolute;
-    right: 8px;
-    top: 8px;
-}
-
-
-.close-modal,
-.max-modal {
-    cursor: pointer;
-    margin: 0 4px;
-}
-
-/* == MODAL ACTIVE == */
-
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal.maximize {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-.modal.maximize iframe {
-    width: 35%;
-    height: 90%;
-    left: 32vw;
-}
-
 iframe{
     width: 60%;
     height: 88%;
@@ -215,3 +162,19 @@ iframe{
     text-align: center;
     margin: 25vh auto;
 }
+
+.posts {
+    margin: 0 auto;
+    max-width: 800px;   
+}
+
+.post{
+    background-color: coral;
+    border-radius: 8px;
+    cursor: pointer;  
+}
+
+.post .card-content p{
+    font-size: 30px;
+}
+
